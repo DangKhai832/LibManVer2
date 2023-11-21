@@ -3,7 +3,7 @@ package com.example.demo.Service;
 import com.example.demo.Entity.document.BorrowDocument364;
 import com.example.demo.Entity.document.Document364;
 import com.example.demo.Entity.document.DocumentsByTimeBorrow364;
-import com.example.demo.Entity.dto.LoginResult;
+import com.example.demo.Entity.dto.LoginResultDTO;
 import com.example.demo.Entity.member.Account364;
 import com.example.demo.Entity.member.Member364;
 import com.example.demo.Repository.DocumentsByTimeBorrowDAO364;
@@ -34,10 +34,10 @@ public class ServiceLibman {
         return mess;
     }
 
-    public ResponseEntity<LoginResult> checkLogin(Account364 obj) {
+    public ResponseEntity<LoginResultDTO> checkLogin(Account364 obj) {
         List<Map<String, Object>> result = messageRepository.checkLogin(obj.getUsername(), obj.getPassword());
 
-        LoginResult loginResult = new LoginResult();
+        LoginResultDTO loginResult = new LoginResultDTO();
 
         if (result.size() == 1 && result.get(0).get("memberId") != null) {
             Map<String, Object> singleResult = result.get(0);

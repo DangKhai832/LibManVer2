@@ -20,6 +20,7 @@ public class BorrowReceipt364 {
     @Column(name = "receiptId")
     private Long receiptId;
 
+
     public Long getReceiptId() {
         return receiptId;
     }

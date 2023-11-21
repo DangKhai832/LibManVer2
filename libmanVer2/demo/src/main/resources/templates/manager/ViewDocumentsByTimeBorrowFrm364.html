@@ -119,8 +119,8 @@
         var fromDateObj = new Date($scope.fromDate);
         var toDateObj = new Date($scope.toDate);
 
-        var fromDateFormatted = formatDateToYYYYMMDD(fromDateObj);
-        var toDateFormatted = formatDateToYYYYMMDD(toDateObj);
+        var fromDateFormatted = formatDateToISOString(fromDateObj);
+        var toDateFormatted = formatDateToISOString(toDateObj);
         var queryString = 'fromDate=' + fromDateFormatted +
                 '&toDate=' + toDateFormatted +
                 '&documentId=' + document.id +
@@ -131,13 +131,10 @@
         $window.location.href = '/home/manager/viewTimeBorrowDetail?' + queryString;
       };
 
-      function formatDateToYYYYMMDD(date) {
-        var year = date.getFullYear();
-        var month = (date.getMonth() + 1).toString().padStart(2, '0');
-        var day = date.getDate().toString().padStart(2, '0');
-
-        return year + '-' + month + '-' + day;
+      function formatDateToISOString(date) {
+        return date.toISOString();
       }
+
     });
   </script>
 </div>

@@ -1,10 +1,7 @@
 package com.example.demo.Controller;
 
-import com.example.demo.Entity.dto.LoginResult;
-import com.example.demo.Entity.member.Account364;
 import com.example.demo.Service.ServiceLibman;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 

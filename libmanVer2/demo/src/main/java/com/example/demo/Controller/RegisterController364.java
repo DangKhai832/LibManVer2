@@ -2,7 +2,7 @@ package com.example.demo.Controller;
 
 
 
-import com.example.demo.Entity.dto.LoginResult;
+import com.example.demo.Entity.dto.LoginResultDTO;
 import com.example.demo.Entity.member.Account364;
 import com.example.demo.Entity.member.Member364;
 import com.example.demo.Service.ServiceLibman;
@@ -36,7 +36,7 @@ public class RegisterController364 {
 
     @PostMapping("/checkLogin")
     @ResponseBody
-    public ResponseEntity<LoginResult> checkLogin(@RequestBody Account364 account364){
+    public ResponseEntity<LoginResultDTO> checkLogin(@RequestBody Account364 account364){
         return serviceLibman.checkLogin(account364);
     };
 }

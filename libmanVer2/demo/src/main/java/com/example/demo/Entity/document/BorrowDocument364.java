@@ -9,19 +9,19 @@ import java.util.Date;
 public class BorrowDocument364 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "borrowDocumentId")
+    @Column(name = "borrow_document_id")
     private Integer borrowDocumentId;
 
-    @Column(name = "documentId")
+    @Column(name = "document_id")
     private Integer documentId;
 
     @Column(name = "date")
     private Date date;
 
-    @Column(name = "readerId")
+    @Column(name = "reader_id")
     private Integer readerId;
 
-    @Column(name = "borrowReceiptId")
+    @Column(name = "borrow_receipt_id")
     private Integer borrowReceiptId;
 
     public Integer getBorrowDocumentId() {
